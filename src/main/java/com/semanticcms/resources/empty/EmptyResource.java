@@ -23,23 +23,53 @@
 package com.semanticcms.resources.empty;
 
 import com.semanticcms.core.resources.Resource;
+import com.semanticcms.core.resources.ResourceFile;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 /**
  * An empty {@link Resource}
  */
 public class EmptyResource extends Resource {
 
-	private final EmptyResourceConnection conn;
-
 	public EmptyResource(EmptyResourceStore store, String path) {
 		super(store, path);
-		conn = new EmptyResourceConnection(this);
 	}
 
 	@Override
 	public EmptyResourceStore getStore() {
 		return (EmptyResourceStore)store;
+	}
+
+	@Override
+	public boolean exists() {
+		return false;
+	}
+
+	@Override
+	public long getLength() throws FileNotFoundException {
+		throw new FileNotFoundException(toString());
+	}
+
+	@Override
+	public long getLastModified() throws FileNotFoundException {
+		throw new FileNotFoundException(toString());
+	}
+
+	@Override
+	public InputStream getInputStream() throws FileNotFoundException {
+		throw new FileNotFoundException(toString());
+	}
+
+	@Override
+	public ResourceFile getResourceFile() throws FileNotFoundException {
+		throw new FileNotFoundException(toString());
+	}
+
+	@Override
+	public boolean isFilePreferred() {
+		return false;
 	}
 
 	@Override
@@ -52,6 +82,6 @@ public class EmptyResource extends Resource {
 	 */
 	@Override
 	public EmptyResourceConnection open() {
-		return conn;
+		return new EmptyResourceConnection(this);
 	}
 }
