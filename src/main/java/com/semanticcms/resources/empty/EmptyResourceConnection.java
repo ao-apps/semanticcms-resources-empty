@@ -22,7 +22,6 @@
  */
 package com.semanticcms.resources.empty;
 
-import com.semanticcms.core.resources.Resource;
 import com.semanticcms.core.resources.ResourceConnection;
 import com.semanticcms.core.resources.ResourceFile;
 import java.io.FileNotFoundException;
@@ -33,38 +32,49 @@ import java.io.InputStream;
  */
 public class EmptyResourceConnection extends ResourceConnection {
 
-	public EmptyResourceConnection(Resource resource) {
+	private boolean closed;
+
+	public EmptyResourceConnection(EmptyResource resource) {
 		super(resource);
 	}
 
 	@Override
-	public boolean exists() {
+	public EmptyResource getResource() {
+		return (EmptyResource)resource;
+	}
+
+	@Override
+	public boolean exists() throws IllegalStateException {
+		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		return false;
 	}
 
 	@Override
-	public long getLength() throws FileNotFoundException {
+	public long getLength() throws FileNotFoundException, IllegalStateException {
+		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		throw new FileNotFoundException(resource.toString());
 	}
 
 	@Override
-	public long getLastModified() throws FileNotFoundException {
+	public long getLastModified() throws FileNotFoundException, IllegalStateException {
+		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		throw new FileNotFoundException(resource.toString());
 	}
 
 	@Override
-	public InputStream getInputStream() throws FileNotFoundException {
+	public InputStream getInputStream() throws FileNotFoundException, IllegalStateException {
+		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		throw new FileNotFoundException(resource.toString());
 	}
 
 	@Override
-	public ResourceFile getResourceFile() throws FileNotFoundException {
+	public ResourceFile getResourceFile() throws FileNotFoundException, IllegalStateException {
+		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		throw new FileNotFoundException(resource.toString());
 	}
 
 	@Override
 	public void close() {
-		// Nothing to close
+		closed = true;
 	}
 }
-	
