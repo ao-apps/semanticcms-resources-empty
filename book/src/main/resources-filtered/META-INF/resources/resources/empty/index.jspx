@@ -47,7 +47,7 @@ along with semanticcms-resources-empty.  If not, see <http://www.gnu.org/license
 			arg.license="${currentPage.property.license}"
 		/>
 		<p>
-			Empty sets of <core:link book="/" page="/index.jspx">SemanticCMS resources</core:link>.
+			Empty sets of <core:link book="/resources" page="/index.jspx">SemanticCMS resources</core:link>.
 		</p>
 		<section:section label="Project Links">
 			<ul>
