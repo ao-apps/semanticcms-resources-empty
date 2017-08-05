@@ -23,7 +23,6 @@
 package com.semanticcms.resources.empty;
 
 import com.semanticcms.core.resources.Resource;
-import com.semanticcms.core.resources.ResourceStore;
 import java.io.File;
 
 /**
@@ -33,9 +32,14 @@ public class EmptyResource extends Resource {
 
 	private final EmptyResourceConnection conn;
 
-	public EmptyResource(ResourceStore store, String path) {
+	public EmptyResource(EmptyResourceStore store, String path) {
 		super(store, path);
 		conn = new EmptyResourceConnection(this);
+	}
+
+	@Override
+	public EmptyResourceStore getStore() {
+		return (EmptyResourceStore)store;
 	}
 
 	@Override
