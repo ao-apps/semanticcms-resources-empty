@@ -42,8 +42,7 @@ public class EmptyResourceStore implements ResourceStore {
 	}
 
 	/**
-	 * Gets a {@link Resource} for the given path.
-	 * The resource may or may not {@link Resource#exists() exist}.
+	 * @implSpec  The resource will never {@link Resource#exists() exist}.
 	 */
 	@Override
 	public EmptyResource getResource(String path) {
