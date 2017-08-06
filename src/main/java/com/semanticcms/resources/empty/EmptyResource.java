@@ -23,7 +23,6 @@
 package com.semanticcms.resources.empty;
 
 import com.semanticcms.core.resources.Resource;
-import com.semanticcms.core.resources.ResourceFile;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -59,11 +58,6 @@ public class EmptyResource extends Resource {
 
 	@Override
 	public InputStream getInputStream() throws FileNotFoundException {
-		throw new FileNotFoundException(toString());
-	}
-
-	@Override
-	public ResourceFile getResourceFile() throws FileNotFoundException {
 		throw new FileNotFoundException(toString());
 	}
 

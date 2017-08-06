@@ -23,7 +23,7 @@
 package com.semanticcms.resources.empty;
 
 import com.semanticcms.core.resources.ResourceConnection;
-import com.semanticcms.core.resources.ResourceFile;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
@@ -68,7 +68,7 @@ public class EmptyResourceConnection extends ResourceConnection {
 	}
 
 	@Override
-	public ResourceFile getResourceFile() throws FileNotFoundException, IllegalStateException {
+	public File getFile() throws FileNotFoundException, IllegalStateException {
 		if(closed) throw new IllegalStateException("Connection closed: " + resource);
 		throw new FileNotFoundException(resource.toString());
 	}
