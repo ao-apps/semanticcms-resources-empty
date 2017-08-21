@@ -22,6 +22,7 @@
  */
 package com.semanticcms.resources.empty;
 
+import com.aoindustries.net.Path;
 import com.semanticcms.core.resources.Resource;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,7 +33,7 @@ import java.io.InputStream;
  */
 public class EmptyResource extends Resource {
 
-	public EmptyResource(EmptyResourceStore store, String path) {
+	public EmptyResource(EmptyResourceStore store, Path path) {
 		super(store, path);
 	}
 

@@ -22,6 +22,7 @@
  */
 package com.semanticcms.resources.empty;
 
+import com.aoindustries.net.Path;
 import com.semanticcms.core.resources.Resource;
 import com.semanticcms.core.resources.ResourceStore;
 
@@ -45,7 +46,7 @@ public class EmptyResourceStore implements ResourceStore {
 	 * @implSpec  The resource will never {@link Resource#exists() exist}.
 	 */
 	@Override
-	public EmptyResource getResource(String path) {
+	public EmptyResource getResource(Path path) {
 		return new EmptyResource(this, path);
 	}
 }
