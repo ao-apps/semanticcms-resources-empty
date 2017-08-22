@@ -42,6 +42,11 @@ public class EmptyResourceStore implements ResourceStore {
 		return "empty:";
 	}
 
+	@Override
+	public boolean isAvailable() {
+		return true;
+	}
+
 	/**
 	 * @implSpec  The resource will never {@link Resource#exists() exist}.
 	 */
