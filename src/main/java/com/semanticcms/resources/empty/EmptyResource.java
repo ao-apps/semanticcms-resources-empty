@@ -1,6 +1,6 @@
 /*
  * semanticcms-resources-empty - Empty sets of SemanticCMS resources.
- * Copyright (C) 2017  AO Industries, Inc.
+ * Copyright (C) 2017, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -73,7 +73,11 @@ public class EmptyResource extends Resource {
 	}
 
 	/**
-	 * @implSpec  All callers get the same connection
+	 * {@inheritDoc}
+	 * <p>
+	 * Implementation Note:
+	 * All callers get the same connection
+	 * </p>
 	 */
 	@Override
 	public EmptyResourceConnection open() {
