@@ -75,7 +75,7 @@ public class EmptyResource extends Resource {
 	/**
 	 * {@inheritDoc}
 	 * <p>
-	 * Implementation Note:
+	 * <b>Implementation Note:</b><br />
 	 * All callers get the same connection
 	 * </p>
 	 */
