@@ -50,7 +50,7 @@ public class EmptyResourceStore implements ResourceStore {
 	/**
 	 * {@inheritDoc}
 	 * <p>
-	 * <b>Implementation Note:</b><br />
+	 * <b>Implementation Note:</b><br>
 	 * The resource will never {@link Resource#exists() exist}.
 	 * </p>
 	 */
