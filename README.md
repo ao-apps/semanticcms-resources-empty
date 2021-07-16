@@ -9,6 +9,12 @@
 
 [![Build](https://github.com/aoindustries/semanticcms-resources-empty/workflows/Build/badge.svg?branch=master)](https://github.com/aoindustries/semanticcms-resources-empty/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-resources-empty/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-resources-empty)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=ncloc)](https://sonarcloud.io/component_measures?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty&metric=ncloc)  
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=reliability_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty&metric=Reliability)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=security_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty&metric=Security)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=sqale_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty&metric=Maintainability)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.semanticcms%3Asemanticcms-resources-empty&metric=coverage)](https://sonarcloud.io/component_measures?branch=master&id=com.semanticcms%3Asemanticcms-resources-empty&metric=Coverage)
 
 Empty sets of [SemanticCMS resources](https://github.com/aoindustries/semanticcms-resources).
 
