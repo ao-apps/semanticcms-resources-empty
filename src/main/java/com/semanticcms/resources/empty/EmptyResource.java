@@ -34,54 +34,54 @@ import java.io.InputStream;
  */
 public class EmptyResource extends Resource {
 
-	public EmptyResource(EmptyResourceStore store, Path path) {
-		super(store, path);
-	}
+  public EmptyResource(EmptyResourceStore store, Path path) {
+    super(store, path);
+  }
 
-	@Override
-	public EmptyResourceStore getStore() {
-		return (EmptyResourceStore)store;
-	}
+  @Override
+  public EmptyResourceStore getStore() {
+    return (EmptyResourceStore)store;
+  }
 
-	@Override
-	public boolean exists() {
-		return false;
-	}
+  @Override
+  public boolean exists() {
+    return false;
+  }
 
-	@Override
-	public long getLength() throws FileNotFoundException {
-		throw new FileNotFoundException(toString());
-	}
+  @Override
+  public long getLength() throws FileNotFoundException {
+    throw new FileNotFoundException(toString());
+  }
 
-	@Override
-	public long getLastModified() throws FileNotFoundException {
-		throw new FileNotFoundException(toString());
-	}
+  @Override
+  public long getLastModified() throws FileNotFoundException {
+    throw new FileNotFoundException(toString());
+  }
 
-	@Override
-	public InputStream getInputStream() throws FileNotFoundException {
-		throw new FileNotFoundException(toString());
-	}
+  @Override
+  public InputStream getInputStream() throws FileNotFoundException {
+    throw new FileNotFoundException(toString());
+  }
 
-	@Override
-	public boolean isFilePreferred() {
-		return false;
-	}
+  @Override
+  public boolean isFilePreferred() {
+    return false;
+  }
 
-	@Override
-	public File getFile() {
-		return null;
-	}
+  @Override
+  public File getFile() {
+    return null;
+  }
 
-	/**
-	 * {@inheritDoc}
-	 * <p>
-	 * <b>Implementation Note:</b><br>
-	 * All callers get the same connection
-	 * </p>
-	 */
-	@Override
-	public EmptyResourceConnection open() {
-		return new EmptyResourceConnection(this);
-	}
+  /**
+   * {@inheritDoc}
+   * <p>
+   * <b>Implementation Note:</b><br>
+   * All callers get the same connection
+   * </p>
+   */
+  @Override
+  public EmptyResourceConnection open() {
+    return new EmptyResourceConnection(this);
+  }
 }

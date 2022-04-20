@@ -32,31 +32,31 @@ import com.semanticcms.core.resources.ResourceStore;
  */
 public class EmptyResourceStore implements ResourceStore {
 
-	private static final EmptyResourceStore instance = new EmptyResourceStore();
+  private static final EmptyResourceStore instance = new EmptyResourceStore();
 
-	public static EmptyResourceStore getInstance() {
-		return instance;
-	}
+  public static EmptyResourceStore getInstance() {
+    return instance;
+  }
 
-	@Override
-	public String toString() {
-		return "empty:";
-	}
+  @Override
+  public String toString() {
+    return "empty:";
+  }
 
-	@Override
-	public boolean isAvailable() {
-		return true;
-	}
+  @Override
+  public boolean isAvailable() {
+    return true;
+  }
 
-	/**
-	 * {@inheritDoc}
-	 * <p>
-	 * <b>Implementation Note:</b><br>
-	 * The resource will never {@link Resource#exists() exist}.
-	 * </p>
-	 */
-	@Override
-	public EmptyResource getResource(Path path) {
-		return new EmptyResource(this, path);
-	}
+  /**
+   * {@inheritDoc}
+   * <p>
+   * <b>Implementation Note:</b><br>
+   * The resource will never {@link Resource#exists() exist}.
+   * </p>
+   */
+  @Override
+  public EmptyResource getResource(Path path) {
+    return new EmptyResource(this, path);
+  }
 }

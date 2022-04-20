@@ -33,49 +33,59 @@ import java.io.InputStream;
  */
 public class EmptyResourceConnection extends ResourceConnection {
 
-	private boolean closed;
+  private boolean closed;
 
-	public EmptyResourceConnection(EmptyResource resource) {
-		super(resource);
-	}
+  public EmptyResourceConnection(EmptyResource resource) {
+    super(resource);
+  }
 
-	@Override
-	public EmptyResource getResource() {
-		return (EmptyResource)resource;
-	}
+  @Override
+  public EmptyResource getResource() {
+    return (EmptyResource)resource;
+  }
 
-	@Override
-	public boolean exists() throws IllegalStateException {
-		if(closed) throw new IllegalStateException("Connection closed: " + resource);
-		return false;
-	}
+  @Override
+  public boolean exists() throws IllegalStateException {
+    if (closed) {
+      throw new IllegalStateException("Connection closed: " + resource);
+    }
+    return false;
+  }
 
-	@Override
-	public long getLength() throws FileNotFoundException, IllegalStateException {
-		if(closed) throw new IllegalStateException("Connection closed: " + resource);
-		throw new FileNotFoundException(resource.toString());
-	}
+  @Override
+  public long getLength() throws FileNotFoundException, IllegalStateException {
+    if (closed) {
+      throw new IllegalStateException("Connection closed: " + resource);
+    }
+    throw new FileNotFoundException(resource.toString());
+  }
 
-	@Override
-	public long getLastModified() throws FileNotFoundException, IllegalStateException {
-		if(closed) throw new IllegalStateException("Connection closed: " + resource);
-		throw new FileNotFoundException(resource.toString());
-	}
+  @Override
+  public long getLastModified() throws FileNotFoundException, IllegalStateException {
+    if (closed) {
+      throw new IllegalStateException("Connection closed: " + resource);
+    }
+    throw new FileNotFoundException(resource.toString());
+  }
 
-	@Override
-	public InputStream getInputStream() throws FileNotFoundException, IllegalStateException {
-		if(closed) throw new IllegalStateException("Connection closed: " + resource);
-		throw new FileNotFoundException(resource.toString());
-	}
+  @Override
+  public InputStream getInputStream() throws FileNotFoundException, IllegalStateException {
+    if (closed) {
+      throw new IllegalStateException("Connection closed: " + resource);
+    }
+    throw new FileNotFoundException(resource.toString());
+  }
 
-	@Override
-	public File getFile() throws FileNotFoundException, IllegalStateException {
-		if(closed) throw new IllegalStateException("Connection closed: " + resource);
-		throw new FileNotFoundException(resource.toString());
-	}
+  @Override
+  public File getFile() throws FileNotFoundException, IllegalStateException {
+    if (closed) {
+      throw new IllegalStateException("Connection closed: " + resource);
+    }
+    throw new FileNotFoundException(resource.toString());
+  }
 
-	@Override
-	public void close() {
-		closed = true;
-	}
+  @Override
+  public void close() {
+    closed = true;
+  }
 }
