@@ -40,7 +40,7 @@ public class EmptyResource extends Resource {
 
   @Override
   public EmptyResourceStore getStore() {
-    return (EmptyResourceStore)store;
+    return (EmptyResourceStore) store;
   }
 
   @Override

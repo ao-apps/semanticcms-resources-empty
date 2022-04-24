@@ -41,7 +41,7 @@ public class EmptyResourceConnection extends ResourceConnection {
 
   @Override
   public EmptyResource getResource() {
-    return (EmptyResource)resource;
+    return (EmptyResource) resource;
   }
 
   @Override
