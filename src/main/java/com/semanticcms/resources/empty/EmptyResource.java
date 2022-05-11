@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 /**
- * An empty {@link Resource}
+ * An empty {@link Resource}.
  */
 public class EmptyResource extends Resource {
 

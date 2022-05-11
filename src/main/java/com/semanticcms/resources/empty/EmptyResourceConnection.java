@@ -29,7 +29,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 /**
- * An empty {@link ResourceConnection}
+ * An empty {@link ResourceConnection}.
  */
 public class EmptyResourceConnection extends ResourceConnection {
 

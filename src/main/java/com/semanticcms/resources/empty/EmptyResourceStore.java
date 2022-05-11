@@ -28,7 +28,7 @@ import com.semanticcms.core.resources.Resource;
 import com.semanticcms.core.resources.ResourceStore;
 
 /**
- * An empty {@link ResourceStore}
+ * An empty {@link ResourceStore}.
  */
 public class EmptyResourceStore implements ResourceStore {
 
