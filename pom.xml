@@ -46,7 +46,7 @@ along with semanticcms-resources-empty.  If not, see <https://www.gnu.org/licens
     <sonar.coverage.exclusions>**.*</sonar.coverage.exclusions>
   </properties>
 
-  <name>SemanticCMS Resources Empty²</name>
+  <name>SemanticCMS Resources Empty</name>
   <url>https://semanticcms.com/resources/empty/</url>
   <description>Empty sets of SemanticCMS resources.</description>
   <inceptionYear>2017</inceptionYear>

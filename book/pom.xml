@@ -36,15 +36,15 @@ along with semanticcms-resources-empty.  If not, see <https://www.gnu.org/licens
     <module.name>com.semanticcms.resources.empty.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-resources-empty</documented.artifactId>
-    <documented.name>SemanticCMS Resources Empty²</documented.name>
+    <documented.name>SemanticCMS Resources Empty</documented.name>
     <documented.description>Empty sets of SemanticCMS resources.</documented.description>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
 
-  <name>SemanticCMS Resources Empty² Book</name>
+  <name>SemanticCMS Resources Empty Book</name>
   <url>https://semanticcms.com/resources/empty/</url>
-  <description>Documentation for SemanticCMS Resources Empty² in SemanticCMS format.</description>
+  <description>Documentation for SemanticCMS Resources Empty in SemanticCMS format.</description>
   <inceptionYear>2017</inceptionYear>
 
   <licenses>
