@@ -22,7 +22,7 @@ Empty sets of [SemanticCMS resources](https://github.com/ao-apps/semanticcms-res
 * [Project Home](https://semanticcms.com/resources/empty/)
 * [Changelog](https://semanticcms.com/resources/empty/changelog)
 * [API Docs](https://semanticcms.com/resources/empty/apidocs/)
-* [Maven Central Repository](https://central.sonatype.com/search?namespace=com.semanticcms&q=a%3Asemanticcms-resources-empty)
+* [Maven Central Repository](https://central.sonatype.com/artifact/com.semanticcms/semanticcms-resources-empty)
 * [GitHub](https://github.com/ao-apps/semanticcms-resources-empty)
 
 ## Contact Us
