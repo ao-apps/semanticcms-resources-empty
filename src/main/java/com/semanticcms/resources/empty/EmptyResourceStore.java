@@ -1,6 +1,6 @@
 /*
  * semanticcms-resources-empty - Empty sets of SemanticCMS resources.
- * Copyright (C) 2017, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2017, 2020, 2021, 2022, 2024  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -26,6 +26,7 @@ package com.semanticcms.resources.empty;
 import com.aoapps.net.Path;
 import com.semanticcms.core.resources.Resource;
 import com.semanticcms.core.resources.ResourceStore;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * An empty {@link ResourceStore}.
@@ -34,8 +35,13 @@ public class EmptyResourceStore implements ResourceStore {
 
   private static final EmptyResourceStore instance = new EmptyResourceStore();
 
+  @SuppressFBWarnings(value = "SING_SINGLETON_GETTER_NOT_SYNCHRONIZED", justification = "instance is static final")
   public static EmptyResourceStore getInstance() {
     return instance;
+  }
+
+  private EmptyResourceStore() {
+    // Do nothing
   }
 
   @Override
