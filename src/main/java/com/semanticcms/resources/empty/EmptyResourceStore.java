@@ -56,10 +56,9 @@ public class EmptyResourceStore implements ResourceStore {
 
   /**
    * {@inheritDoc}
-   * <p>
-   * <b>Implementation Note:</b><br>
-   * The resource will never {@link Resource#exists() exist}.
-   * </p>
+   *
+   * <p><b>Implementation Note:</b><br>
+   * The resource will never {@link Resource#exists() exist}.</p>
    */
   @Override
   public EmptyResource getResource(Path path) {

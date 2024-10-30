@@ -78,10 +78,9 @@ public class EmptyResource extends Resource {
 
   /**
    * {@inheritDoc}
-   * <p>
-   * <b>Implementation Note:</b><br>
-   * All callers get the same connection
-   * </p>
+   *
+   * <p><b>Implementation Note:</b><br>
+   * All callers get the same connection</p>
    */
   @Override
   public EmptyResourceConnection open() {
