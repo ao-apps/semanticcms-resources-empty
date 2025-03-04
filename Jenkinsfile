@@ -30,7 +30,6 @@ def upstreamProjects = [
   // Direct
   '../../oss/net-types', // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
   '../core/resources', // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-resources</artifactId>
-  // No Jenkins: <groupId>com.github.spotbugs</groupId><artifactId>spotbugs-annotations</artifactId>
 ]
 
 /******************************************************************************************
